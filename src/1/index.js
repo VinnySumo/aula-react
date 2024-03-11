@@ -16,16 +16,16 @@ export default function Atividade1 () {
 
     return(
         <View style={styles.container}>
-            <Image source={logo} style= { { width: '100%', height: "15%" }} />
-            <Text style={styles.paragraph}>
+            <Image source={logo} style={styles.image} />
+            <Text style={styles.titulo}>
                 Atividade 1
             </Text>
-            
-            <Text style={{textAlign: 'center'}}>
-                    Ola maria!
-                </Text>
+
+                    <Saudacoes name='Mario' />
+                    <Saudacoes name='Maria' />
+                    <Saudacoes name='Bruno' />
+                    <Saudacoes name='Bruna' />
                 
-            
         </View>
     );
 }

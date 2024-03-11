@@ -5,10 +5,11 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         backgroundColor: '#E3F2FD',
-        padding: 8, 
+        padding: 8,
+        
         
     },  
-    paragraph: {
+    titulo: {
         margin: 24,
         fontSize: 18,
         fontWeight: 'bold',
@@ -17,9 +18,11 @@ const styles = StyleSheet.create({
     },
     image: {
         width: '90%',
-        height: '15%',
-        margin: 10,
+        resizeMode: 'center',
     }
-});
+
+}
+
+);
 
 export default styles;
