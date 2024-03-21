@@ -1,14 +1,19 @@
-import { View, Text } from 'react-native'; 
+import { View, Text, TouchableOpacity, Alert } from 'react-native'; 
 
 import styles from './styles';
 
-export default function Mensagem () { 
+export default function atividade3 () { 
+
+    function mensagem() {
+        alert('Parabens');
+    }
 
     return(
         <View style={styles.container}>
-            <Text>
-                Aula 3
-            </Text>
+            <Text style={styles.titulo}>Exemplo 3</Text>
+                <TouchableOpacity style={styles.botao} onPress={mensagem}>
+                    <Text style={styles.txtbotao}>Botao</Text>
+                </TouchableOpacity>
         </View>
     );
 }
