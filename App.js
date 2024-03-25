@@ -3,7 +3,8 @@ import { StyleSheet, Text, View } from 'react-native';
 //import Mensagem from './src/ex_2'; exemplo2
 
   //import Atividade1 from './src/1'; //atividade 1
-  import Atividade3 from './src/3'; //atividade 3
+ // import Exemplo3 from './src/ex_3'; //exemplo 3
+    import Atividade3 from './src/3';
 
 export default function App() {
   return (
