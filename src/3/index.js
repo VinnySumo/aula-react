@@ -36,11 +36,12 @@ export default function atividade3 () {
                 </TouchableOpacity>
                 </View>
 
-             
+               <View style={styles.container2}>
+               
                 <TouchableOpacity style={styles.botao} onPress={() => zerar()}>
                     <Text style={styles.txtbotao}>zerar</Text>
                 </TouchableOpacity>
-
+                </View>
                 
         </View>
     );
