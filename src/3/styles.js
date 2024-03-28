@@ -3,12 +3,12 @@ import { inline } from 'react-native-web/dist/cjs/exports/StyleSheet/compiler';
 
 const styles = StyleSheet.create({
     container: {
-        //flex: 1, 
+        flex: 1, 
         backgroundColor: '#fafafa',
         width: '100%',
         borderRadius: 20,
         alignItems: 'center',
-        justifyContent: 'space-around',
+        justifyContent: 'center',
         padding: 20,
     
     },  
@@ -20,17 +20,17 @@ const styles = StyleSheet.create({
         width: '100%',
         alignItems: 'center',
         justifyContent: 'space-around',
+        //borderWidth:3,
+        marginTop: 20,
     },  
 
-    container2: {
-        //flex: 1,
-        flexDirection: 'row',
-        borderRadius: 20,
-        width: '100%',
-        alignItems: 'center',
-        justifyContent: 'space-around',
-        
-    },  
+      
+
+    botaocontainer:{
+        width: '30%',
+
+ 
+    },
 
 
 
@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     },
 
     botao: {
-        width: '40%',
+        width: '80%',
         padding: 10,
         margin: 20,
         backgroundColor: 'black',
