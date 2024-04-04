@@ -2,7 +2,9 @@ import { View, Text, TextInput, Pressable } from "react-native";
 
 import styles from './styles';
 
-import { useState, pressed } from "react";
+import { useState, } from "react";
+
+
 
 export default function exemplo4 () {
 
@@ -15,6 +17,11 @@ export default function exemplo4 () {
         setTxtDigitado(txt);
     }
 
+    function exibirtextoHandle(){
+        setTxtTela(txt2);
+        setTxt2('');
+    }
+
     return(
         <View style={styles.container}>
             <Text style={styles.titulo}>Exemplo 4</Text>
@@ -25,12 +32,14 @@ export default function exemplo4 () {
             <View style={styles.linha}> </View>
 
             <View style={styles.texto}>{txttela} </View>
+            
             <TextInput 
             style={styles.input}
             onChangeText={(vlr) => setTxt2(vlr)}
             value={txt2}
             />
-            <Pressable style={( pressed ) => pressed ? [styles.botao, styles.botaopress] : styles.botao}>
+            <Pressable style={({ pressed }) => pressed ? [styles.botao, styles.botaopress] : styles.botao} 
+            onPress={() => exibirtextoHandle()}>
                 <Text style={styles.txtbotao}>Exibir texto</Text>
             </Pressable>
             
