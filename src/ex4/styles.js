@@ -41,6 +41,35 @@ input: {
     
 },
 
+linha: {
+    borderBottomWidth: 3,
+    borderColor: '#b71c1c',
+    marginVertical: 20,
+    width: '100%',
+},
+
+botao: {
+    width: '80%',
+    padding: 16,
+    alignItems: 'center',
+    borderRadius: 20,
+    backgroundColor: '#b71c1c',
+    margin: 20,
+},
+
+botaopress: {
+    backgroundColor: '#fff',
+},
+
+txtbotao: {
+    color: '#ffcdd2',
+    fontSize: 20,
+},
+
+txtbotaopress: {
+    color: '#b71c1c',
+}
+
 });
 
 export default styles;
