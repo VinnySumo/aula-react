@@ -28,6 +28,8 @@ export default function Atividade4 () {
 
             <View style={styles.texto}>{txttela} {txttela1} </View>
 
+
+            
             <Text style={styles.nome}>Nome</Text>
 
             <TextInput 
@@ -42,6 +44,8 @@ export default function Atividade4 () {
             onChangeText={(vlr) => setTxt3(vlr)}
             value={txt3}
             />
+
+            
 
 
                <Pressable style={({ pressed }) => pressed ? [styles.botao, styles.botaopress] : styles.botao} 

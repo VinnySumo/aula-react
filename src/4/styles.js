@@ -13,6 +13,8 @@ container: {
    
 },  
 
+
+
 titulo: {
     fontSize: 30,
     fontWeight: 'bold',
@@ -35,7 +37,7 @@ nome: {
     fontSize: 15,
    padding: 5,
     color: '#b71c1c',
-    marginRight: '65%',
+   width: '80%',
     margin: 3,
 },
 
@@ -43,7 +45,8 @@ nome1: {
     fontSize: 15,
    padding: 5,
     color: '#b71c1c',
-    marginRight: '60%',
+    alignItems: 'left',
+    width: '80%',
     margin: 3,
 },
 
