@@ -9,7 +9,7 @@ container: {
     height: '100%',
     alignItems: 'center',
     padding: 8,
-    //borderRadius: 20,
+    borderRadius: 20,
    
 },  
 
