@@ -1,61 +1,118 @@
-import React, { useState } from 'react';
-import { View, Text, TextInput, Pressable } from 'react-native';
+import { View, Text, Touchable, TextInput, Pressable } from "react-native";
+import { useState } from "react";
 
 import styles from './styles';
 
-export default function Exemplo5() {
-    const [n1, setN1] = useState('0');
-    const [n2, setN2] = useState('0');
-    const [total, setTotal] = useState('0');
+export default function Exemplo5 () {
 
-    function Soma() {
-        setTotal(parseInt(n1) + parseInt(n2));
-    }
-    function Sub() {
-        setTotal(parseInt(n1) - parseInt(n2));
+    const [isFocus1, setIsFocus1] =useState(false);
+    const [isFocus2, setIsFocus2] =useState(false);
+    const [isFocusTotal, setFocusTotal] =useState(false);
+    const [n1, set1] =useState(0);
+    const [n2, set2] =useState(0);
+    const [total, setTotal] =useState('');
+
+    function soma() {
+        setTotal(parseFloat(n1) + parseFloat(n2));
     }
 
-    return (
+
+    return(
+
         <View style={styles.container}>
-            <Text style={styles.paragraph}>
-                Exemplo 5
-            </Text>
 
-            <View style={styles.container}>
-                <Text style={styles.txtSaida}>Calculadora básica</Text>
+            <Text style={styles.titulo}>Exemplo 5</Text>
 
-                <Text style={styles.textLabel1}>Primeiro número</Text>
-                <TextInput
-                    style={styles.txtEntrada}
-                    onChangeText={(entrada) => setN1(entrada)}
-                    value={n1}
-                />
+            <Text style={styles.txtsaida}>Calculadora Basica</Text>
 
-                {/* <Text style={styles.txtSaida}> + </Text> */}
+            <Text style={styles.txtlabel}>1º Numero</Text>
 
-                <Text style={styles.textLabel1}>Segundo número</Text>
-                <TextInput
-                    style={styles.txtEntrada}
-                    onChangeText={(entrada) => setN2(entrada)}
-                    value={n2}
-                />
+            <TextInput
+            style ={
+                [
+                styles.txtentrada,
+                isFocus1 ?
+                {
+                    borderColor: '#C51162',
+                    outline: 'none'
+                   }
+                :
+                  {}
+              ]
+            }
 
-                <Text style={[styles.txtSaida, { margin: 0 }]}> = </Text>
+            onFocus={() => setIsFocus1(true)}
+            onBlur={() => setIsFocus1(false)}
+            onChangeText={(num1) => set1(num1)}
+            value={n1}
+            //keyboardtype='numeric'
 
-                <Text style={styles.textLabel1}>Total</Text>
-                <TextInput
-                    style={styles.txtEntrada}
-                    editable={false}
-                    value={total.toString()}
-                />
+            />
+            
+    <Text style={styles.txtsaida}> + </Text>
 
-                <Pressable style={styles.button} onPress={Soma}>
-                    <Text style={styles.textButton}>+</Text>
-                </Pressable>
-                <Pressable style={styles.button} onPress={Sub}>
-                    <Text style={styles.textButton}>-</Text>
-                </Pressable>
-            </View>
+    <Text style={styles.txtlabel}>2º Numero</Text>
+
+    <TextInput
+            style ={
+                [
+                styles.txtentrada,
+                isFocus2 ?
+                {
+                    borderColor: '#C51162',
+                    outline: 'none'
+                   }
+                :
+                  {}
+              ]
+            }
+
+            onFocus={() => setIsFocus2(true)}
+            onBlur={() => setIsFocus2(false)}
+            onChangeText={(num2) => set2(num2)}
+            value={n2}
+          
+            />
+            
+            <Text style={[styles.txtsaida , {margin: 0}]}> = </Text>
+
+            <Text style={styles.txtlabel}> Total </Text>
+
+            <TextInput
+            style ={
+                [
+                styles.txtentrada,
+                isFocusTotal ?
+                {
+                    borderColor: '#C51162',
+                    outline: 'none'
+                   }
+                :
+                  {}
+              ]
+            }
+
+            onFocus={() => setIsFocus2(true)}
+            onBlur={() => setIsFocus2(false)}
+           editable={false}
+           value={total ? parseFloat(total).toFixed(2) : ''}
+          
+            />
+
+            <Pressable
+            onPress={() => soma() }
+            style={
+                ({pressed}) => pressed ?
+                [styles.butao, styles.butaotouch]
+                :
+                styles.butao
+            }
+            >
+                <Text style={styles.txtbutao}> + </Text>
+            </Pressable>
+
         </View>
-    );
+
+
+    )
 }
