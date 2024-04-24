@@ -6,8 +6,9 @@ import { StyleSheet, Text, View } from 'react-native';
  // import Exemplo3 from './src/ex_3'; //exemplo 3
    // import Atividade3 from './src/3'; //atividade 3
    //import Exemplo4 from './src/ex4' //exemplo4;
-   import Atividade4 from './src/4'; //atividade4
-   import Exemplo5 from './src/ex5'; //exemplo5
+   //import Atividade4 from './src/4'; //atividade4
+   //import Exemplo5 from './src/ex5'; //exemplo5
+     import Atividade5 from './src/5'; //atividade5
   
   
    
@@ -16,7 +17,7 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Exemplo5/>
+      <Atividade5/>
       <StatusBar style="auto" />
     </View>
   );
